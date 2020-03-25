@@ -14,4 +14,4 @@ serverSocket.bind((udpHost, udpPort))
 while True:
     print("Server Socket Created. Waiting for Client Connection...")
     message, address = serverSocket.recvfrom(1024)
-    print("Received Messages: ", message, "from", address)
+    print("Received Messages: ", message.decode('utf-8'), "from", address)
