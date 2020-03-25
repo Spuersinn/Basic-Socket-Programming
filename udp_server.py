@@ -5,7 +5,7 @@ serverSocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
 # get hostname of server, assign port number
 udpHost = socket.gethostname()
-udpPort = 92500
+udpPort = 62500
 
 # bind socket --> use hostname and port we specified earlier
 serverSocket.bind((udpHost, udpPort))
@@ -15,5 +15,3 @@ while True:
     print("Server Socket Created. Waiting for Client Connection...")
     message, address = serverSocket.recvfrom(1024)
     print("Received Messages: ", message, "from", address)
-
-
